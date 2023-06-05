@@ -587,13 +587,7 @@ def do_emp_outer(request):
         booking.save()
         messages.success(request, "Successfully Booking For Employer")
         return redirect('emp_outer')
-
-        # outer_booking = outer.objects.create(name=name,mob=mobile_no,services=services,no_of_worker=no_of_worker,gender_preference=gender,work_start_Date=start_Date,landmark=landmark,city=city,state=state,pin_code=pin,specific_requirements=anyother,sallery_offerd=salary,goverment=goverment,department=department)
-        # outer_booking.save()
-
-        # messages.success(request,"Successfully Created employer")
     return render(request, "employer/outer.html", {'city': city})
-
 
 def List_of_employer(request):
     employer = Employer.objects.all()
